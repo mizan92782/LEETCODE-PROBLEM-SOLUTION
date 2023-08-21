@@ -2,6 +2,10 @@ class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& arr) {
         
+        
+        ios_base::sync_with_stdio(false);
+cin.tie(nullptr);
+cout.tie(nullptr);
         set<vector<int>>set;
        sort(arr.begin(),arr.end());
        for(int i=0;i<arr.size()-2;i++)
