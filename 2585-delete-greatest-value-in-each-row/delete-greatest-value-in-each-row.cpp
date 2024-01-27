@@ -10,24 +10,29 @@ class Solution {
 public:
     int deleteGreatestValue(vector<vector<int>>& grid) {
         
-        for(int i=0;i<grid.size();i++)
-        {
-            sort(grid[i].begin(),grid[i].end());
-        }
+      int n=grid.size();
+      int m=grid[0].size();
+
+      for(int i=0;i<n;i++)
+      {
+          make_heap(grid[i].begin(),grid[i].end());
+      }
 
 
-        int sum=0;
+      int sum=0;
+      for(int i=0;i<m;i++)
+      {
+          int maxi=INT_MIN;
+          for(int j=0;j<n;j++)
+          {
+                 maxi=max(maxi,grid[j].front());
+                 pop_heap(grid[j].begin(),grid[j].end()-i);
+          }
 
-        for(int i=0;i<grid[0].size();i++)
-        {
-             int maxi=INT_MIN;
-             for(int  j=0;j<grid.size();j++)
-             {
-                  maxi=max(maxi,grid[j][i]);
-             }
+          sum=sum+maxi;
+          cout<<maxi<<endl;
 
-             sum=sum+maxi;
-        }
+      }
 
 
 
