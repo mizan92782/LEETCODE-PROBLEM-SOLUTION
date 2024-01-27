@@ -11,14 +11,14 @@ class Solution {
 public:
     int maxProduct(vector<int>& nums) {
         
-        int n=nums.size();
-        sort(nums.begin(),nums.end());
+         make_heap(nums.begin(),nums.end());
+         int x=nums.front();
+         pop_heap(nums.begin(),nums.end());
+        
 
-        if(nums[n-1]<=0)
-        {
-            return (nums[0]-1) * (nums[1]-1);
-        }
+         int y=nums.front();
+         cout<<x<<" "<<y<<endl;
 
-        return  (nums[n-1]-1)*(nums[n-2]-1);
+        return  (x-1)*(y-1);
     }
 };
