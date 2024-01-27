@@ -17,8 +17,7 @@ public:
         
 
          int y=nums.front();
-         cout<<x<<" "<<y<<endl;
-
+         
         return  (x-1)*(y-1);
     }
 };
