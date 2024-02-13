@@ -1,3 +1,12 @@
+const static auto fast = [] {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    return 0;
+}();
+
+
+
 class Solution {
 public:
    
@@ -26,7 +35,7 @@ public:
 
               fuel=fuel+x;
 
-              cout<<"from city: "<<u<<"  fuel needed : "<<x<<"  ::: node : "<<count<<endl;
+              cout<<"from city: "<<u<<"  fuel needed : "<<x<<endl;
             
 
             return count;
