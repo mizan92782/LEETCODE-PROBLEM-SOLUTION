@@ -1,14 +1,15 @@
 class Solution {
 public:
     int minPartitions(string n) {
-        
-        int m=0;
-        for(int i=0;i<n.size();i++)
-        {
-              m=max(m,n[i]-'0');
-        }
+       
+       char m=0;
 
-        return m;
-        
+       for(char c:n)
+       {
+           if(m<c)  m=c;
+       }
+
+
+        return m-'0';
     }
 };
