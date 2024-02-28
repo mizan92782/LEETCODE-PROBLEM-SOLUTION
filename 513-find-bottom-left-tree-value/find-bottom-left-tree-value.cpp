@@ -12,55 +12,33 @@
 class Solution {
 public:
 
+   void func(TreeNode* root, int& maxlevel,int level,int& ans)
+   {
+        if(root==NULL) return ;
+
+        if(maxlevel<level)
+        {
+            maxlevel=level;
+            ans=root->val;
+
+        }
+
+
+        func(root->left,maxlevel,level+1,ans);
+        func(root->right,maxlevel,level+1,ans);
+
+    return ;
+   }
+
    
 
     int findBottomLeftValue(TreeNode* root) {
         
-        queue<TreeNode*>que;
-        que.push(root);
-        que.push(NULL);
-         int ans=0;
-
-        while(!que.empty())
-        {
-             TreeNode* x= que.front();
-             que.pop();
-
-             if(x==NULL && que.size()==0)
-             {
-                 break;
-             }
-
-             if(x==NULL)
-             {
-                que.push(NULL);
-             }else
-             {
-                 ans=x->val;
-             
-
-             
-
-             
-
-             if(x->right)
-             {
-                 que.push(x->right);
-             }
-
-
-
-             if(x->left)
-             {
-                 que.push(x->left);
-             }
-
-
-             }
-        }
-
-
-
+        int maxlevel=-1;
+        int level=0;
+        int ans=0;
+       
+        func(root,maxlevel,level,ans);
         return ans;
     }
 };
