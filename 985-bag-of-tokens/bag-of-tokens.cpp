@@ -21,10 +21,7 @@ public:
                 {
                     score++;
                     maxs=max(maxs,score);
-                
                     power=power-tokens[i];
-
-                      cout<<i<< " "<<score<<" "<<power<<endl;
                     i++;
 
                    
@@ -32,8 +29,6 @@ public:
                 {
                       score--;
                       power=power+tokens[j];
-
-                       cout<<j<< " "<<score<<" "<<power<<endl;
                       j--;
                 }else
                 {
