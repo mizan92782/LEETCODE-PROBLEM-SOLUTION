@@ -8,7 +8,6 @@ public:
 
       char c=',';
 
-     int count=0;
 
      
       while(i<j)
@@ -16,26 +15,17 @@ public:
          
           if(s[i]==s[j])
           {
-            
-             
-              count=count+2;
-               cout<<i<<" -> "<<j<<"->>> "<<count<<endl;
-               c=s[i];
-
+             c=s[i];
              i++;
              j--;
             
           }else if(s[i]==c)
           {  
-              
-               count++;
-                cout<<i<<" -> "<<j<< " ->>> "<<count<<endl;
              
               i++;
           }else if(s[j]==c){
               
-              count++;
-               cout<<i<<" -> "<<j<< " ->>> "<<count<<endl;
+            
               j--;
           }else{
               break;
@@ -45,7 +35,7 @@ public:
     
      if(c==s[i] && i==j)
      {
-         count++;
+        
          i++;
      }
 
