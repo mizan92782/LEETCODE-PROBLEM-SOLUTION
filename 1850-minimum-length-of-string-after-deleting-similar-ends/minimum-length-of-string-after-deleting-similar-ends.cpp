@@ -46,6 +46,7 @@ public:
      if(c==s[i] && i==j)
      {
          count++;
+         i++;
      }
 
        
@@ -53,7 +54,7 @@ public:
       
 
    
-     return s.size()-count;
+     return (j-i)+1;;
         
     }
 };
