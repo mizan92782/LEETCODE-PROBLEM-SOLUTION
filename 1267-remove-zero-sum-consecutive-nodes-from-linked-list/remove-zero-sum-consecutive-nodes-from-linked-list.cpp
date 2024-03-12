@@ -50,23 +50,34 @@ public:
 
 
 
-        ListNode* dummy = new ListNode(0);
-        dummy->next = head;
-        temp = dummy;
-
-        // Iterate through the linked list, adjusting pointers to remove zero-sum sublists
-        for (int i = 0; i < n; i++) {
-            if (dp[i] != -1) {
-                temp->next->val = list[i]; // Assign value from list to the linked list
-                temp = temp->next;         // Move to next node in the linked list
+        temp=head;
+        ListNode* tem2=NULL;
+        for(int i=0;i<n;i++)
+        {
+            if(dp[i]==0)
+            {
+                temp->val=list[i];
+                tem2=temp;
+                temp=temp->next;
             }
         }
 
-        // Disconnect the remaining nodes after the last non-zero-sum sublist
-        temp->next = nullptr;
 
-        // Return the modified linked list
-        return dummy->next;
+        if(tem2!=NULL)
+        {
+            tem2->next=NULL;
+        }
+
+        if(tem2==NULL) return NULL;
+
+      
+
+      
+
+       
+
+
+        return head;
       
     }
 };
