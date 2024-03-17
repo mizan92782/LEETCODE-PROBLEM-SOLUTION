@@ -19,10 +19,7 @@ public:
           return a[0]<b[0];
         });
 
-        for(int i=0;i<intervals.size();i++)
-        {
-            cout<<intervals[i][0]<<" "<<intervals[i][1]<<endl;
-        }
+        
 
 
 
@@ -44,7 +41,7 @@ public:
 
                 x=intervals[i][1];
                 int x1=ans.back()[0];
-                int y2=ans.back()[1];
+               
                 ans.pop_back();
 
                 ans.push_back({x1,x});
