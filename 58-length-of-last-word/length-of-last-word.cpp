@@ -7,13 +7,13 @@ public:
 
         for(int i=s.size()-1;i>=0;i--)
         {
-             if(isspace(s[i]) && find==false)
+             if(s[i]==' ' && find==false)
              {
                 continue;
              }
 
 
-             if(isspace(s[i]) && find==true)
+             if(s[i]==' ' && find==true)
              {
                  break;
              }
