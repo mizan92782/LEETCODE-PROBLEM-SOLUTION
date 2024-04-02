@@ -34,8 +34,8 @@ public:
          });
 
         
-         vector<int>lfirst(255,0);
-         vector<int>lsecond(255,0);
+         vector<int>lfirst(255,-1);
+         vector<int>lsecond(255,-1);
         
 
 
@@ -44,14 +44,14 @@ public:
            
            
             
-            if(first[i].index!=second[i].index  ||  lfirst[first[i].c]!=lsecond[second[i].c])
+            if(first[i].index!=second[i].index  || lfirst[first[i].c]!=lsecond[second[i].c])
             {  
                 return false;
             }
 
 
-            lfirst[first[i].c]++;
-            lsecond[second[i].c]++;
+            lfirst[first[i].c]=first[i].index;
+            lsecond[second[i].c]=second[i].index;
 
 
             cout<<endl<<endl;
