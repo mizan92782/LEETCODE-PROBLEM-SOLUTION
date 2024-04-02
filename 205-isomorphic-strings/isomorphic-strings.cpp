@@ -25,13 +25,6 @@ public:
 
 
 
-         sort(first.begin(),first.end(),[](mapping x,mapping y){
-         return x.c==y.c;
-         });
-
-         sort(second.begin(),second.end(),[](mapping x,mapping y){
-         return x.c==y.c;
-         });
 
         
          vector<int>lfirst(255,-1);
