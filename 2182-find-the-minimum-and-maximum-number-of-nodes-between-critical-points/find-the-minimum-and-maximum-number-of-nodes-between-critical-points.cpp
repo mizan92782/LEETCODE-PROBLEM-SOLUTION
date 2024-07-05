@@ -11,6 +11,14 @@
 class Solution {
 public:
     vector<int> nodesBetweenCriticalPoints(ListNode* head) {
+
+        const static auto fast = [] {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    return 0;
+}();
+
         
         if (head==NULL || head->next==NULL) return {-1,-1};
 
