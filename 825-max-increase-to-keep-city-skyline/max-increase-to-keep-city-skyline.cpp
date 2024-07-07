@@ -4,6 +4,12 @@ public:
 
     int maxIncreaseKeepingSkyline(vector<vector<int>>& grid) {
         
+        const static auto fast = [] {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    return 0;
+}();
         int n=grid.size();
         vector<int>rm(n,INT_MIN);
         vector<int>cm(n,INT_MIN);
