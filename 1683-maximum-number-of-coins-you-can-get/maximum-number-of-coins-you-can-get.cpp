@@ -1,6 +1,17 @@
 class Solution {
 public:
     int maxCoins(vector<int>& piles) {
+        
+        
+        const static auto fast = [] {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    return 0;
+}();
+
+
+        
         sort(piles.begin(),piles.end(),greater<int>());
        
         int n=piles.size();
