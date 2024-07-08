@@ -1,7 +1,14 @@
 class Solution {
 public:
     int findTheWinner(int n, int k) {
-        
+        const static auto fast = [] {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    return 0;
+}();
+
+
         if(n==1) return 1;
         vector<int>arr(n);
         for(int i=0;i<n;i++)
