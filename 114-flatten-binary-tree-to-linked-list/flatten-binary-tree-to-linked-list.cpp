@@ -10,35 +10,37 @@
  * };
  */
 class Solution {
-
-    void pre_order(TreeNode* root,vector<TreeNode*>& vec)
-    {
-        if(root==NULL)
-        {
-            return ;
-        }
-
-        vec.push_back(root);
-        pre_order(root->left,vec);
-        pre_order(root->right,vec);
-    }
 public:
-    void flatten(TreeNode* root) {
-
-        if(root==NULL ) return ;
-
-        vector<TreeNode*>vec;
-        vec.push_back(NULL);
-        pre_order(root,vec);
-
-        for(int i=1;i<vec.size()-1;i++)
+    void util(TreeNode** head,TreeNode* right,TreeNode* left)
+    {
+         if(right==NULL && left==NULL ) return ;
+           
+        if(left!=NULL)
         {
-            vec[i]->right=vec[i+1];
-            vec[i]->left=NULL;
+            (*head)->right=left;
+            (*head)->left=NULL;
+
+             *head=(*head)->right;
+             util(head, (*head)->right, (*head)->left);
+        }
+           
+        
+
+
+
+        if(right!=NULL)
+        {
+            (*head)->right=right;
+            (*head)->left=NULL;
+            (*head)=(*head)->right;
+             util(head, (*head)->right, (*head)->left);
         }
 
+    }
 
-        return ;
-        
+
+    void flatten(TreeNode* head) {
+         if(head==NULL) return ;
+         util(&head,head->right,head->left);
     }
 };
