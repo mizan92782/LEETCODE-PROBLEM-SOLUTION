@@ -14,6 +14,7 @@ public:
 
  vector<vector<int>> intervalIntersection(vector<vector<int>>& firstList, vector<vector<int>>& secondList) {
        
+       ios_base::sync_with_stdio(false), cin.tie(NULL),cout.tie(NULL);
        int fn=firstList.size();
        int sn=secondList.size();
         vector<vector<int>> result;
