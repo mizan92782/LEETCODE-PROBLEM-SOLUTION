@@ -31,15 +31,11 @@ public:
                }
 
 
-                 if(firstList[one][1]>secondList[two][1])
-                   {
-                     two++;
-                   }else if(firstList[one][1]<secondList[two][1])
+                 if(firstList[one][1]<secondList[two][1])
                    {
                      one++;
-                   }else
+                   }else 
                    {
-                     one++;
                      two++;
                    }
                
