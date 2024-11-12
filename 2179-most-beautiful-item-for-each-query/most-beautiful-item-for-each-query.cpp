@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> maximumBeauty(vector<vector<int>>& items, vector<int>& queries) {
-        
+        ios_base::sync_with_stdio(false), cin.tie(NULL),cout.tie(NULL);
         for(int i=0;i<queries.size();i++)
         {
             items.push_back({queries[i],0});
