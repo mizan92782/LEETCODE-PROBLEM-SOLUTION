@@ -2,7 +2,7 @@ class Solution {
 public:
     string addStrings(string num1, string num2) {
         
-
+       ios_base::sync_with_stdio(false), cin.tie(NULL),cout.tie(NULL);
        int n=num1.size()-1;
        int m=num2.size()-1;
        string str="";
