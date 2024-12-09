@@ -18,10 +18,7 @@ public:
              mem[i]=count;
         }
 
-        for(int i=0;i<n;i++)
-        {
-            cout<<mem[i]<<" ";
-        }
+       
 
         int m=queries.size();
         vector<bool>ans(m,false);
@@ -29,7 +26,7 @@ public:
         for(int i=0;i<queries.size();i++)
         {
                 ans[i]= (mem[queries[i][1]]-mem[queries[i][0]])==0;
-                cout<<mem[queries[i][1]] << " -> "<<mem[queries[i][0]];
+                
                 
         }
 
